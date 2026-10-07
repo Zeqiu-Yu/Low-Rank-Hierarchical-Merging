@@ -1,0 +1,21 @@
+{
+  "base_model": "Qwen/Qwen2.5-Math-7B",
+  "reasoning_model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+  "scale": "7B",
+  "rank": 16,
+  "alpha": 0.15,
+  "lambda_bar": 0.5,
+  "num_sequences": 32,
+  "seq_len": 512,
+  "seed": 0,
+  "method": "aim",
+  "param_value_mask_rate": 0.8,
+  "mask_rate": 0.3,
+  "aim_omega": 0.4,
+  "hessian_source": "base",
+  "output_dir": "outputs/models/lhm_7b",
+  "exclude_param_names_regex": [
+    ".*embed_tokens\\.weight",
+    ".*lm_head\\.weight"
+  ]
+}

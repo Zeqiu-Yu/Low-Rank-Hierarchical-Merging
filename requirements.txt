@@ -1,0 +1,17 @@
+# Core environment for Low-Rank Hierarchical Merging (LHM).
+# Mirrors the environment used in the paper / the long-to-short merging repo.
+#
+#   pip install -r requirements.txt
+#
+numpy==1.26.4
+torch==2.5.1
+transformers==4.48.2
+accelerate>=0.34.0
+safetensors>=0.4.0
+tqdm>=4.66.0
+
+# Optional: only needed by `scripts/plot_figures.py`.
+# matplotlib>=3.8.0
+
+# Optional: only needed to read *.yaml configuration files.
+# pyyaml>=6.0

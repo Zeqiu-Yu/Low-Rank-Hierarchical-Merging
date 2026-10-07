@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Experiment artefacts (merged models, Hessian traces, eval outputs, tables)
+outputs/
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Evaluation toolkit cloned into the repo root (see readme.md)
+Qwen2.5-Math/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store

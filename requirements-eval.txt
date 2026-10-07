@@ -1,0 +1,33 @@
+# Evaluation environment for LHM: Qwen2.5-Math evaluation toolkit + vLLM.
+#
+# Includes requirements.txt, so one environment can run both merging and
+# evaluation. Tested with Python 3.10; vLLM generation needs an NVIDIA GPU.
+#
+#   git clone https://github.com/QwenLM/Qwen2.5-Math.git
+#   pip install -r requirements-eval.txt
+#   pip install -e Qwen2.5-Math/evaluation/latex2sympy
+#
+# Differences from Qwen2.5-Math/evaluation/requirements.txt:
+#   * vllm is pinned to 0.7.2, the release built for torch 2.5.1 and
+#     transformers 4.48.2 (the versions used for merging);
+#   * sympy is 1.13.1 instead of 1.12 because torch 2.5.1 requires exactly
+#     1.13.1; answer grading on the six benchmarks was spot-checked to be
+#     identical under both versions;
+#   * flash_attn is omitted: the toolkit never imports it and vLLM ships its
+#     own attention kernels.
+
+-r requirements.txt
+
+# inference
+vllm==0.7.2
+
+# Qwen2.5-Math evaluation toolkit
+datasets==3.3.2
+pyarrow==19.0.1
+tqdm==4.67.1
+python-dateutil==2.9.0.post0
+sympy==1.13.1
+antlr4-python3-runtime==4.11.1   # must match sympy's LaTeX parser
+word2number==1.1
+Pebble==5.1.0
+timeout-decorator==0.5.0
