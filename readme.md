@@ -1,8 +1,7 @@
 # Low-Rank Hierarchical Merging for Efficient Long-to-Short Reasoning
 
-**Zeqiu Yu**¹*, **Xuesheng Zhang**²*, **Wenxiao Zhao**³, **Shixiao Wang**
+**Zeqiu Yu**, **Xuesheng Zhang**, **Wenxiao Zhao**, **Shixiao Wang**
 
-<sub>¹ ² ³ Affiliations as listed in the camera-ready paper. * Equal contribution.</sub>
 
 ---
 
